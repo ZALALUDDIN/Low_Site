@@ -1,0 +1,84 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: relative;
+    clear: both;
+    height: 60px;
+    background-color: #003059;
+    color: #FFF;
+}
+footer{
+    clear: both;
+    text-align: center;
+    padding: 15px 0;
+    color: #080808;
+}
+
+button{
+    text-align: center;
+    padding: 6px;
+    background-color: #357ebd;
+    color: #FFF;
+    margin-left: 40px;
+    border-radius: 8%;
+}
+    
+.navbar-header{
+    float: left;
+    
+    
+}
+.pull-left{
+    float: left;
+    margin-left: 5px;
+    line-height: 5px;
+    
+}
+
+.modal-header, .table-header, .table-header tr {
+    background-color: #164674;
+    color: #fff;
+  }
+
+  .section-title {
+    color: #164674;
+    border-bottom: 2px solid #164674;
+    width: 75%;
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+
+.section{
+    margin: auto;
+    padding: auto;
+}
+
+.modal-content {
+    background-color: #f9f1ea !important;
+    border-radius: 4px;
+  }
+
+  .message {
+    font-size: 20px;
+    padding: 5px;
+    animation: blinkAndZoom 0.5s infinite;
+  }
+  
+  @keyframes blinkAndZoom {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+
+  .step-form {
+    display: none;
+  }

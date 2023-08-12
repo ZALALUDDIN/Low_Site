@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hmenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <div class="header-top text-left ">
+                <div class="navbar-header" style="width: 100%;">
+                    <div class="pull-left">
+                        <img style="height: 50px; padding-top: 5px;" src="logo.png">
+                    </div>
+                    <div class="pull-left" >
+                        <h4 style="margin-left: 2px;">জাতীয় আইনগত সহায়তা প্রদান সংস্থা</h4>
+                        <span style="color: #ffffff; font-size: 12px;">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a style="margin-left: 20%; color: white;">
+                            Welcome Guest
+                        </a>
+                        <a style="margin-left: 25%; color: white;">
+                            নোটিশ <span style="color: red;" class="fa fa-envelope message"> </span>
+                        </a>
+                        <a class="fa fa-power-off" style="margin-left: 5%; color: #f8d17d;">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--*** Menu *** -->
+        <div class="cont">
+            <nav class="hrmenu ">
+                <ul>
+                    <li><a class="fa fa-home" href="#"> হোম</a></li>
+                    <li><a class="fa fa-dribbble"> অনলাইন আবেদন পত্র </a></li>
+                    <li><a class="fa fa-lock" href="#"> পাসওয়ার্ড পরিবর্তন</a>
+                        <li><a href="#"><span class="fa fa-cog fa-spin"></span> সেটিংস</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+
+
+        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">নতুন আবেদন</button>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span style="color: white !important;"> &times; </span></button>
+                        <h4 class="modal-title">নতুন আবেদন</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <nav class="navbar navbar-expand-sm bg-light navbar-light py-0">
+                                <div class="navbar-nav">
+                                    <a class="nav-item btn btn-primary" onclick="showStep('step1')"> ১. প্রাথমিক তথ্য </a>
+                                    <a class="nav-item btn btn-primary" onclick="showStep('step2')"> ২. আবেদনকারীর তথ্য </a>
+                                    <a class="nav-item btn btn-primary" onclick="showStep('step3')"> ৩. অপরপক্ষের তথ্য</a>
+                                </div>
+                            </nav>
+                        </div>
+                        <br>
+
+        <!-- Section 1 start -->
+            <div class="step-form container" id="step1"> 
+                        <section>
+                            <div class="section-title">
+                                প্রাথমিক তথ্য
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="date"><span style="color: red;">*</span>তারিখ</label><br>
+                                        <input class="form-control" type="date" id="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="selector1" class="control-label"><span style="color: red;">*</span>কার্যালয়ের নাম</label>
+                                        <select name="selector1" id="selector1" class="form-control">
+                                            <option>Legal Aid Office,Dhaka</option>
+                                            <option>Legal Aid Office,Gazipur</option>
+                                            <option>Legal Aid Office,Faridpur</option>
+                                            <option>Legal Aid Office,Rajbari</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="selector" class="control-label"><span style="color: red;">*</span>আবেদনের ধরন</label>
+                                        <select name="selector" id="selector" class="form-control">
+                                            <option>Post-Case</option>
+                                            <option>Pre-case</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="section-title">
+                                আবেদনের বর্ণনা
+                            </div>
+                            
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label><span style="color: red;">*</span>আবেদন এর মাধ্যম</label>
+                                        <select name="selector" id="selector" class="form-control">
+                                            <option>আপোষ মিমাংসা সমাধানের উদ্দেশ্যে</option>
+                                            <option>নতুন মামলা দায়ের এর উদ্দেশ্যে</option>
+                                            <option>বিদ্যমান মামলা আর্থিক সহায়তা প্রাপ্তির উদ্দেশ্যে</option>
+                                            <option>আইনগত পরামর্শ প্রাপ্তির </option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="col-sm-4">
+                                        <label>এই ক্ষেত্রে কি শিশুরা জড়িত?</label><br>
+                                       <input type="radio" id="yes" name="yes" value="yes">
+                                       <label for="yes">হ্যাঁ</label>
+                                       <input type="radio" id="no" name="no" value="no">
+                                       <label for="no">না</label>
+                                    </div>
+                                </div>
+                            </div><br>
+                        
+                        
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label for="selector"><span style="color: red;">*</span>ধরন</label>
+                                            <select name="selector" id="selector" class="form-control">
+                                                <option>Civil</option>
+                                                <option>Civil Appeal </option>
+                                                <option>Civil Rivision </option>
+                                                <option>Criminal Appeal</option>
+                                                <option>Criminal Rivision</option>
+                                                <option>Family</option>
+                                                <option>Jail Appeal</option>
+                                                <option>Labour Civil</option>
+                                                <option>Labour Criminal</option>
+                                                <option>Writ</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label for="selector">উপধরন</label>
+                                            <select name="selector" id="selector" class="form-control">
+                                                <option>Adverse Procession</option>
+                                                <option>Bank Ruptcy</option>
+                                                <option>Civil Appeal</option>
+                                                <option>Civil Miss Case</option>
+                                                <option>Civil Others</option>
+                                             </select>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <br>
+                                            <button class="btn btn-primary">+ যোগ করুন</button>
+                                        </div>
+                                    </div>
+                            </div>
+                    </section><br>
+                    
+                    <div class="section-title">
+
+                    </div>
+
+                    <section>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label for="txtarea"><span style="color: red;">*</span>সাধারন বর্ণনা</label>
+                                        <textarea name="txtarea"  id="txtarea" cols="50" rows="4" class="form-control"></textarea>
+                                        
+                                        
+                                </div>
+                            </div>
+                        </div><br><br>
+                            
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="selector"><span style="color: red;">*</span>আইনগত সহায়তা প্রত্যাশা করা হয়েছে</label>
+                                        <select name="selector" id="selector" class="form-control">
+                                        <option>আপোষ মিমাংসা সমাধানের উদ্দেশ্যে</option>
+                                        <option>নতুন মামলা দায়ের এর উদ্দেশ্যে</option>
+                                        <option>বিদ্যমান মামলা আর্থিক সহায়তা প্রাপ্তির উদ্দেশ্যে</option>
+                                        <option>আইনগত পরামর্শ প্রাপ্তির </option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <label for="txtarea">মন্তব্য</label>
+                                    <textarea name="txtarea" id="txtarea" cols="50" rows="4" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </section><br><br><br>
+                    
+                    
+                
+                    <div class="row">
+                    <div class="section-title">
+                            আবেদনকারীর স্বাক্ষর
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <label for="exampleInputFile">File input</label><br>
+                            <input class="form-control" type="file" id="exampleInputFile">
+                        </div>
+                        <div class="col-sm-2">
+                        </div>
+            
+                        <div class="col-sm-4 float-right">
+                            <br>
+                            <button class="btn btn-primary" data-dismiss="modal">বাতিল</button>
+                            <button class="btn btn-primary" onclick="nextStep('step1', 'step2')">পরের ধাপ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section 1 close -->
+
+
+
+                <!-- Section 2 start -->
+
+    <div class="step-form container" id="step2" style="display: none;">
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            আপনার ছবি 
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="exampleInputFile">File input</label>
+                            <input class="form-control" type="file" id="exampleInputFile">
+                        </div>
+                    </div>
+                </section><br>
+
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            প্রাথমিক তথ্য
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="name"><span style="color: red;">*</span>নাম</label>
+                                    <input class="form-control" type="text" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="lname">জাতীয় পরিচয়পত্র নম্বর</label>
+                                    <input class="form-control" type="number" id="number" name="number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <input type="radio" id="yes" name="yes" value="yes">
+                                    <label for="yes">Father</label>
+                                    <input type="radio" id="na" name="na" value="na">
+                                    <label for="na">পিতা / স্বামীর নাম</label>
+                                    <input class="form-control" type="text" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="radio" id="yes" name="yes" value="yes">
+                                    <label for="yes">মাতা</label>
+                                    <input type="radio" id="na" name="na" value="na">
+                                    <label for="na">মাতা / স্ত্রীর নাম</label>
+                                    <input class="form-control" type="text" id="name" name="name">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="selector" class="col-sm-4 control-label"><span style="color: red;">*</span> লিঙ্গ </label>
+                                    <select name="selector1" id="selector1" class="form-control">
+                                        <option>Male পুরুষ </option>
+                                        <option>Female মহিলা</option>
+                                        <option>Child শিশু</option>
+                                        <option>Third Gender তৃতীয় লিঙ্গ</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="name">বয়স</label>
+                                    <input class="form-control" type="text" id="name" name="name">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="selector" class="col-sm-4 control-label"> বৈবাহিক অবস্থা </label>
+                                    <select name="selector1" id="selector1" class="form-control">
+                                        <option value=""> Select </option>
+                                        <option value="5">Divorced বিবাহ বিচ্ছিন্ন </option>
+                                        <option value="3">Married বিবাহিত </option>
+                                        <option value="4">Separated বিচ্ছিন্ন </option>
+                                        <option value="2">Unmarried অবিবাহিত </option>
+                                        <option value="6">Widowed বিধবা </option>
+                                        <option value="7">Widower বিপত্নীক </option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="selector" class="col-sm-4 control-label"> বিবাহ নিবন্ধিত </label>
+                                    <select name="selector1" id="selector1" class="form-control">
+                                        <option>হ্যাঁ </option>
+                                        <option>না</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                </section><br>
+
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            যোগাযোগের তথ্য 
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="name"><span style="color: red;">*</span>যোগাযোগের নাম্বার</label>
+                                    <input class="form-control" type="number" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="lname">যোগাযোগের বিকল্প নাম্বার</label>
+                                    <input class="form-control" type="number" id="number" name="number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="lname"> ই-মেইল</label>
+                                    <input class="form-control" type="email" id="number" name="number">
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+
+                            </div>
+                        </div>
+                </section><br>
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            বর্তমান ঠিকানা 
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="name">গ্রাম/ বাড়ী</label>
+                                    <input class="form-control" type="number" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="lname">ডাকঘর/ রোড</label>
+                                    <input class="form-control" type="number" id="number" name="number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="name">থানা/ উপজেলা</label>
+                                    <input class="form-control" type="number" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="lname">জেলা</label>
+                                    <select name="a" id="a" class="form-control input-sm ng-pristine">
+                                        <option value="0">  </option>
+                                        <option value="35">Bagerhat   বাগেরহাট </option>
+                                        <option value="7">Bandarban   বান্দরবন </option>
+                                        <option value="1">Barguna  বরগুনা </option>
+                                        <option value="2">Barisal  বরিশাল </option>
+                                        <option value="3">Bhola   ভোলা </option>
+                                        <option value="45">Bogra   বগুড়া </option>
+                                        <option value="8">Brahmanbaria   ব্রাহ্মণবাড়িয়া </option>
+                                        <option value="9">Chandpur   চাঁদপুর </option>
+                                        <option value="49">Chapainawabganj   চাঁপাইনবাবগঞ্জ </option>
+                                        <option value="10">Chittagong   চট্টগ্রাম </option>
+                                        <option value="36">Chuadanga   চুয়াডাঙ্গা </option>
+                                        <option value="11">Comilla   কুমিল্লা </option>
+                                        <option value="12">Cox's Bazar   কক্সবাজার </option>
+                                        <option value="18">Dhaka   ঢাকা </option>
+                                        <option value="53">Dinajpur   দিনাজপুর </option>
+                                        <option value="19">Faridpur   ফরিদপুর </option>
+                                        <option value="13">Feni   ফেনী </option>
+                                        <option value="54">Gaibandha   গাইবান্ধা </option>
+                                        <option value="20">Gazipur   গাজীপুর </option>
+                                        <option value="21">Gopalganj   গোপালগঞ্জ </option>
+                                        <option value="61">Habiganj   হবিগন্ঞ্জ </option>
+                                        <option value="22">Jamalpur   জামালপুর </option>
+                                        <option value="37">Jessore   যশোর </option>
+                                        <option value="4">Jhalokati   ঝালকাঠি </option>
+                                        <option value="38">Jhenaidah   ঝিনাইদহ </option>
+                                        <option value="46">Joypurhat   জয়পুরহাট </option>
+                                        <option value="14">Khagrachhari   খাগড়াছড়ি </option>
+                                        <option value="39">Khulna   খুলনা </option>
+                                        <option value="23">Kishoreganj   কিশোরগঞ্জ </option>
+                                        <option value="55">Kurigram   কুড়িগ্রাম </option>
+                                        <option value="40">Kushtia   কুষ্টিয়া </option>
+                                        <option value="15">Lakshmipur   লক্ষীপুর </option>
+                                        <option value="56">Lalmonirhat   লালমনিরহাট </option>
+                                        <option value="24">Madaripur   মাদারীপুর </option>
+                                        <option value="41">Magura   মাগুরা </option>
+                                        <option value="25">Manikganj   মানিকগঞ্জ </option>
+                                        <option value="42">Meherpur   মেহেরপুর </option>
+                                        <option value="62">Moulvibazar   মৌলভীবাজার </option>
+                                        <option value="26">Munshiganj    মুন্সীগঞ্জ </option>
+                                        <option value="27">Mymensingh   ময়মনসিংহ </option>
+                                        <option value="47">Naogaon   নওগাঁ </option>
+                                        <option value="43">Narail   নড়াইল </option>
+                                        <option value="28">Narayanganj   নারায়ণগঞ্জ </option>
+                                        <option value="29">Narsingdi   নরসিংদী </option>
+                                        <option value="48">Natore   নাটোর </option>
+                                        <option value="30">Netrakona   নেত্রকোণা </option>
+                                        <option value="57">Nilphamari   নীলফামারী </option>
+                                        <option value="16">Noakhali   নোয়াখালী </option>
+                                        <option value="50">Pabna   পাবনা </option>
+                                        <option value="58">Panchagarh   পঞ্চগড় </option>
+                                        <option value="5">Patuakhali   পটুয়াখালী </option>
+                                        <option value="6">Pirojpur   পিরোজপুর </option>
+                                        <option value="31">Rajbari   রাজবাড়ী </option>
+                                        <option value="51">Rajshahi   রাজশাহী </option>
+                                        <option value="17">Rangamati   রাঙ্গামাটি </option>
+                                        <option value="59">Rangpur   রংপুর </option>
+                                        <option value="44">Satkhira   সাতক্ষীরা </option>
+                                        <option value="32">Shariatpur    শরীয়তপুর </option>
+                                        <option value="33">Sherpur   শেরপুর </option>
+                                        <option value="52">Sirajganj   সিরাজগঞ্জ </option>
+                                        <option value="63">Sunamganj   সুনামগন্ঞ্জ </option>
+                                        <option value="64">Sylhet   সিলেট </option>
+                                        <option value="34">Tangail   টাঙ্গাইল </option>
+                                        <option value="60">Thakurgaon   ঠাকুরগাওঁ </option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                </section><br>
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            স্থায়ী ঠিকানা
+                        </div>
+                        <p class="">
+                            <input type="checkbox">
+                            <label for="vehicle1"> বর্তমান ঠিকানার অনুরূপ</label>
+                        </p>
+                    </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="name">গ্রাম/ বাড়ী</label>
+                                    <input class="form-control" type="number" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="lname">ডাকঘর/ রোড</label>
+                                    <input class="form-control" type="number" id="number" name="number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="name">থানা/ উপজেলা</label>
+                                    <input class="form-control" type="number" id="name" name="name">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="lname">জেলা</label>
+                                    <select name="a" id="a" class="form-control input-sm ng-pristine">
+                                        <option value="0">  </option>
+                                        <option value="35">Bagerhat   বাগেরহাট </option>
+                                        <option value="7">Bandarban   বান্দরবন </option>
+                                        <option value="1">Barguna  বরগুনা </option>
+                                        <option value="2">Barisal  বরিশাল </option>
+                                        <option value="3">Bhola   ভোলা </option>
+                                        <option value="45">Bogra   বগুড়া </option>
+                                        <option value="8">Brahmanbaria   ব্রাহ্মণবাড়িয়া </option>
+                                        <option value="9">Chandpur   চাঁদপুর </option>
+                                        <option value="49">Chapainawabganj   চাঁপাইনবাবগঞ্জ </option>
+                                        <option value="10">Chittagong   চট্টগ্রাম </option>
+                                        <option value="36">Chuadanga   চুয়াডাঙ্গা </option>
+                                        <option value="11">Comilla   কুমিল্লা </option>
+                                        <option value="12">Cox's Bazar   কক্সবাজার </option>
+                                        <option value="18">Dhaka   ঢাকা </option>
+                                        <option value="53">Dinajpur   দিনাজপুর </option>
+                                        <option value="19">Faridpur   ফরিদপুর </option>
+                                        <option value="13">Feni   ফেনী </option>
+                                        <option value="54">Gaibandha   গাইবান্ধা </option>
+                                        <option value="20">Gazipur   গাজীপুর </option>
+                                        <option value="21">Gopalganj   গোপালগঞ্জ </option>
+                                        <option value="61">Habiganj   হবিগন্ঞ্জ </option>
+                                        <option value="22">Jamalpur   জামালপুর </option>
+                                        <option value="37">Jessore   যশোর </option>
+                                        <option value="4">Jhalokati   ঝালকাঠি </option>
+                                        <option value="38">Jhenaidah   ঝিনাইদহ </option>
+                                        <option value="46">Joypurhat   জয়পুরহাট </option>
+                                        <option value="14">Khagrachhari   খাগড়াছড়ি </option>
+                                        <option value="39">Khulna   খুলনা </option>
+                                        <option value="23">Kishoreganj   কিশোরগঞ্জ </option>
+                                        <option value="55">Kurigram   কুড়িগ্রাম </option>
+                                        <option value="40">Kushtia   কুষ্টিয়া </option>
+                                        <option value="15">Lakshmipur   লক্ষীপুর </option>
+                                        <option value="56">Lalmonirhat   লালমনিরহাট </option>
+                                        <option value="24">Madaripur   মাদারীপুর </option>
+                                        <option value="41">Magura   মাগুরা </option>
+                                        <option value="25">Manikganj   মানিকগঞ্জ </option>
+                                        <option value="42">Meherpur   মেহেরপুর </option>
+                                        <option value="62">Moulvibazar   মৌলভীবাজার </option>
+                                        <option value="26">Munshiganj    মুন্সীগঞ্জ </option>
+                                        <option value="27">Mymensingh   ময়মনসিংহ </option>
+                                        <option value="47">Naogaon   নওগাঁ </option>
+                                        <option value="43">Narail   নড়াইল </option>
+                                        <option value="28">Narayanganj   নারায়ণগঞ্জ </option>
+                                        <option value="29">Narsingdi   নরসিংদী </option>
+                                        <option value="48">Natore   নাটোর </option>
+                                        <option value="30">Netrakona   নেত্রকোণা </option>
+                                        <option value="57">Nilphamari   নীলফামারী </option>
+                                        <option value="16">Noakhali   নোয়াখালী </option>
+                                        <option value="50">Pabna   পাবনা </option>
+                                        <option value="58">Panchagarh   পঞ্চগড় </option>
+                                        <option value="5">Patuakhali   পটুয়াখালী </option>
+                                        <option value="6">Pirojpur   পিরোজপুর </option>
+                                        <option value="31">Rajbari   রাজবাড়ী </option>
+                                        <option value="51">Rajshahi   রাজশাহী </option>
+                                        <option value="17">Rangamati   রাঙ্গামাটি </option>
+                                        <option value="59">Rangpur   রংপুর </option>
+                                        <option value="44">Satkhira   সাতক্ষীরা </option>
+                                        <option value="32">Shariatpur    শরীয়তপুর </option>
+                                        <option value="33">Sherpur   শেরপুর </option>
+                                        <option value="52">Sirajganj   সিরাজগঞ্জ </option>
+                                        <option value="63">Sunamganj   সুনামগন্ঞ্জ </option>
+                                        <option value="64">Sylhet   সিলেট </option>
+                                        <option value="34">Tangail   টাঙ্গাইল </option>
+                                        <option value="60">Thakurgaon   ঠাকুরগাওঁ </option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                </section><br>
+
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            প্রতিনিধির নাম ও পূর্ণ ঠিকানা 
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="txtarea">নাম ও ঠিকানা</label>
+                                        <textarea name="txtarea" id="txtarea" cols="50" rows="4" class="form-control"></textarea>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="name">আবেদনকারীর সাথে সম্পর্ক</label>
+                                    <input class="form-control" type="number" id="number" name="number">
+                                </div>
+                            </div>
+                        </div>
+                </section><br>
+
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            সাহায্যকারী ডকুমেন্ট 
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <label for="txtarea">নাম ও ঠিকানা</label>
+                                        <textarea name="txtarea" id="txtarea" cols="50" rows="4" class="form-control"></textarea>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="name">আবেদনকারীর সাথে সম্পর্ক</label>
+                                    <input class="form-control" type="number" id="number" name="number">
+                                </div>
+                            </div>
+                        </div>
+                </section><br>
+
+                <section>
+                    <div class="row">
+                        <div class="section-title">
+                            অন্যান্য তথ্য
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>ধর্ম</label>
+                                <select name="ctl0ion" id="MainConten" class="form-control input-sm ng-pristine">
+                                    <option value="1">  </option>
+                                    <option value="3">Buddhists বুদ্ধ </option>
+                                    <option value="4">Christian ক্রিস্টিয়ান </option>
+                                    <option value="5">Hindus হিন্দু </option>
+                                    <option value="2">Islam ইসলাম </option>
+                                    <option value="6">Other অন্যান্য </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>জাতিসত্তা</label>
+                                <select name="ctl00$city" id="MainCon" class="form-control input-sm ng-pristine">
+                                    <option value="1">  </option>
+                                    <option value="2">Bangali বাঙ্গালী </option>
+                                    <option value="3">Bawm বম </option>
+                                    <option value="4">Chak চক </option>
+                                    <option value="5">Chakma চাকমা </option>
+                                    <option value="6">Hajong হাজং </option>
+                                    <option value="7">Khasia খাসিয়া </option>
+                                    <option value="8">Khumi খোমি </option>
+                                    <option value="9">Khyang খায়াং </option>
+                                    <option value="10">Lushai লোসাই </option>
+                                    <option value="11">Magh মগ </option>
+                                    <option value="12">Manipuri মনিপুরী </option>
+                                    <option value="13">Marma মার্মা </option>
+                                    <option value="14">Mru মরু </option>
+                                    <option value="15">Murong মোরং </option>
+                                    <option value="16">Oraon ওরায়ং </option>
+                                    <option value="17">Other অন্যান্য </option>
+                                    <option value="18">Paharia পাহাড়িয়া </option>
+                                    <option value="19">Pankho পাংখো </option>
+                                    <option value="20">Rajbangshi রাজবংশী </option>
+                                    <option value="21">Rakhain রাখাইং </option>
+                                    <option value="22">Santal সান্তাল </option>
+                                    <option value="23">Tanchangya তঞ্চঙ্গা </option>
+                                    <option value="24">Tripura ত্রিপুরা </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>জাতীয়তা</label>
+                                <select name="ctl0ity" id="MainCony" class="form-control input-sm ng-pristine">
+                                    <option value="2">Bangladeshi  বাংলাদেশী </option>
+                                    <option value="9">Foreigner বিদেশী </option>
+                                    <option value="10">Nationality Retest-1 Nationality Retest-1 </option>
+                                    <option value="11">Nationality Retest-1 Nationality Retest-1 </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>পেশা</label>
+                                <select name="ctl00$Maion" id="MainCon" class="form-control input-sm ng-pristine">
+                                    <option value="1">  </option>
+                                    <option value="2">Agriculture কৃষি </option>
+                                    <option value="3">Business ব্যবসা </option>
+                                    <option value="4">Day Labour দিনমজুরী </option>
+                                    <option value="5">Govt Service সরকারী চাকুরি </option>
+                                    <option value="6">Housewife গৃহিনী </option>
+                                    <option value="7">NGO এনজিও </option>
+                                    <option value="8">Other অন্যান্য </option>
+                                    <option value="9">Private Service ব্যাক্তিগত সেবা </option>
+                                    <option value="10">Professional পেশাগত </option>
+                                    <option value="11">Self-employed নিজ কর্মসংস্থান </option>
+                                    <option value="12">Student  </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>মাসিক আয়</label>
+                                <select name="ctl0e" id="MainConme" class="form-control input-sm ng-pristine">
+                                    <option value="1">0-0</option>
+                                    <option value="2">0-5000</option>
+                                    <option value="3">6000-10000</option>
+                                    <option value="4">11000-15000</option>
+                                    <option value="5">16000-20000</option>
+                                    <option value="6">21000-25000</option>
+                                    <option value="7">26000-30000</option>
+                                    <option value="8">31000-35000</option>
+                                    <option value="9">36000-40000</option>
+                                    <option value="10">41000-45000</option>
+                                    <option value="11">46000-50000</option>
+                                    <option value="12">51000-55000</option>
+                                    <option value="13">56000-60000</option>
+                                    <option value="14">61000-65000</option>
+                                    <option value="15">66000-70000</option>
+                                    <option value="16">71000-75000</option>
+                                    <option value="17">76000-80000</option>
+                                    <option value="18">81000-85000</option>
+                                    <option value="19">86000-60000</option>
+                                    <option value="20">61000-95000</option>
+                                    <option value="21">96000-100000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>প্রতিবন্ধী</label>
+                                <select name="ctl0ility" id="MainCility" class="form-control input-sm ng-pristine">
+                                    <option value=""></option>
+                                    <option value="0"> Yes (হ্যা) </option>
+                                    <option value="1"> No (না) </option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group ng-hide">
+                                <label>প্রতিবন্ধীর ধরন</label>
+                                <select name="ctl0yType" id="MainyType" class="form-control input-sm ng-pristine">
+                                    <option value="1">  </option>
+                                    <option value="2">Autism  </option>
+                                    <option value="3">Hearing impairment শ্রবণ প্রতিবন্ধী </option>
+                                    <option value="4">Intellectual disability বুদ্ধি প্রতিবন্ধী </option>
+                                    <option value="5">Physical disability শারীরিক প্রতিবন্ধী </option>
+                                    <option value="6">Speech impairment বাক প্রতিবন্ধী </option>
+                                    <option value="7">Visual impairment দৃষ্টি প্রতিবন্ধী </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+
+
+                
+                
+<br><br><br>
+                                <div class="row">
+                                    <div class="section-title">
+                                        আবেদনকারীর স্বাক্ষর
+                                    </div>
+                                    
+                                    <div class="col-sm-5">
+                                        <label for="exampleInputFile">File input</label><br>
+                                        <input class="form-control" type="file" id="exampleInputFile">
+                                    </div>
+                        
+                                    <div class="col-sm-4 float-end">
+                                        <br>
+                                        <button class="btn btn-primary" data-dismiss="modal">বাতিল</button>
+                                        <button class="btn btn-primary" onclick="previousStep('step2', 'step1')">পূর্বের ধাপ</button>
+                                        <button class="btn btn-primary" onclick="nextStep('step2', 'step3')">পরের ধাপ</button>
+
+                                    </div>
+                                </div>
+        </div>
+                    <!-- section 2 close -->
+
+
+
+
+                    <!-- Section 3 start -->
+            <div class="step-form container" id="step3" style="display: none;"> 
+                    <div class="section-title">
+                        বিরোধী পক্ষের তথ্য 
+                    </div>
+
+                    
+                <div id="MainContent_UpdatePanel7">
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>অপর পক্ষ এর ধরণ</label>
+                                <p class="radio-group">
+                                    <label>
+                                        <input id="" type="radio" name="ctl0$" value="" >
+                                        <label for="">ব্যক্তি</label>
+                                    </label>
+                                    <label>
+                                        <input id="" type="radio" name="ctl0$" value="" >
+                                        <label for="-2" class="ng-binding">সংগঠন</label>
+                                    </label>
+                                    <label>
+                                        <input id="" type="radio" name="ctl0$" value="" >
+                                        <label for="-3" class="ng-binding">রাষ্ট্র</label>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="">
+                        <div class="section-title text-small">
+                            সাধারন তথ্য 
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>নাম</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control" autocomplete="off"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="alternative-option-label">
+                                        <input id="" type="radio" name="ctl00$$" value="" >
+                                        <span>Father</span>
+                                    </label>
+                                    <label class="alternative-option-label">
+                                        <input id="" type="radio" name="ctl00$$" value="">
+                                        <span>পিতা / স্বামীর নাম</span>
+                                    </label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control" autocomplete="off"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label class="alternative-option-label">
+                                        <input id="" type="radio" name="ctl00$$" value="">
+                                        <span>Mother</span>
+                                    </label>
+                                    <label class="alternative-option-label">
+                                        <input id="" type="radio" name="ctl00$$" value="">
+                                        <span>মাতা / স্ত্রীর নাম</span>
+                                    </label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>লিঙ্গ</label>
+                                    <select name="ctl00$$" id="" class="form-control">
+                                        <option value="0">  </option>
+                                        <option value="1">Male পুরুষ </option>
+                                        <option value="2">Female নারী </option>
+                                        <option value="3">Child শিশু </option>
+                                        <option value="4">Third Gender তৃতীয় লিঙ্গ </option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>বয়স</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>শিক্ষার পর্যায়</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="1">  </option>
+                                        <option value="2">No Education  নিরক্ষর </option>
+                                        <option value="5">Primary School প্রাইমারী স্কুল </option>
+                                        <option value="7">Below Secondary School level মাধ্যমিক স্কুল পর্যায় এর নিম্নে </option>
+                                        <option value="6">Secondary School level মাধ্যমিক স্কুল পর্যায় </option>
+                                        <option value="8">Higher School Level উচ্চ মাধ্যমিক স্কুল পর্যায় </option>
+                                        <option value="9">Honors/Degree Level অনার্স/ডিগ্রী পর্যায় </option>
+                                        <option value="10">Masters Level মাস্টার্স পর্যায় </option>
+                                        <option value="4">Below Primary School প্রাইমারী শিক্ষার নিম্নে </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>বৈবাহিক অবস্থা</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                            <option value="1">  </option>
+                                            <option value="5">Divorced বিবাহ বিচ্ছিন্ন </option>
+                                            <option value="3">Married বিবাহিত </option>
+                                            <option value="4">Separated বিচ্ছিন্ন </option>
+                                            <option value="2">Unmarried অবিবাহিত </option>
+                                            <option value="6">Widowed বিধবা </option>
+                                            <option value="7">Widower বিপত্নীক </option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ng-hide">
+                                <div class="form-group">
+                                    <label>বিবাহ নিবন্ধিত</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value=""></option>
+                                        <option value="0"> Yes (হ্যা) </option>
+                                        <option value="1"> No (না) </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-title text-small">
+                            যোগাযোগের মাধ্যম  
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>ই-মেইল</label>
+                                    <input name="ctl00$$" type="email" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>যোগাযোগের নাম্বার</label>
+                                    <input name="ctl00$$" type="number" id="" min="0" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>যোগাযেগের বিকল্প নাম্বার</label>
+                                    <input name="ctl00$$" type="number" id="" min="0" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-title text-small">
+                            বর্তমান ঠিকানা 
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>গ্রাম/ বাড়ী</label>
+                                    <input name="" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>ডাকঘর/ রোড</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>থানা/ উপজেলা	</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>জেলা</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="0">  </option>
+                                        <option value="35">Bagerhat   বাগেরহাট </option>
+                                        <option value="7">Bandarban   বান্দরবন </option>
+                                        <option value="1">Barguna  বরগুনা </option>
+                                        <option value="2">Barisal  বরিশাল </option>
+                                        <option value="3">Bhola   ভোলা </option>
+                                        <option value="45">Bogra   বগুড়া </option>
+                                        <option value="8">Brahmanbaria   ব্রাহ্মণবাড়িয়া </option>
+                                        <option value="9">Chandpur   চাঁদপুর </option>
+                                        <option value="49">Chapainawabganj   চাঁপাইনবাবগঞ্জ </option>
+                                        <option value="10">Chittagong   চট্টগ্রাম </option>
+                                        <option value="36">Chuadanga   চুয়াডাঙ্গা </option>
+                                        <option value="11">Comilla   কুমিল্লা </option>
+                                        <option value="12">Cox's Bazar   কক্সবাজার </option>
+                                        <option value="18">Dhaka   ঢাকা </option>
+                                        <option value="53">Dinajpur   দিনাজপুর </option>
+                                        <option value="19">Faridpur   ফরিদপুর </option>
+                                        <option value="13">Feni   ফেনী </option>
+                                        <option value="54">Gaibandha   গাইবান্ধা </option>
+                                        <option value="20">Gazipur   গাজীপুর </option>
+                                        <option value="21">Gopalganj   গোপালগঞ্জ </option>
+                                        <option value="61">Habiganj   হবিগন্ঞ্জ </option>
+                                        <option value="22">Jamalpur   জামালপুর </option>
+                                        <option value="37">Jessore   যশোর </option>
+                                        <option value="4">Jhalokati   ঝালকাঠি </option>
+                                        <option value="38">Jhenaidah   ঝিনাইদহ </option>
+                                        <option value="46">Joypurhat   জয়পুরহাট </option>
+                                        <option value="14">Khagrachhari   খাগড়াছড়ি </option>
+                                        <option value="39">Khulna   খুলনা </option>
+                                        <option value="23">Kishoreganj   কিশোরগঞ্জ </option>
+                                        <option value="55">Kurigram   কুড়িগ্রাম </option>
+                                        <option value="40">Kushtia   কুষ্টিয়া </option>
+                                        <option value="15">Lakshmipur   লক্ষীপুর </option>
+                                        <option value="56">Lalmonirhat   লালমনিরহাট </option>
+                                        <option value="24">Madaripur   মাদারীপুর </option>
+                                        <option value="41">Magura   মাগুরা </option>
+                                        <option value="25">Manikganj   মানিকগঞ্জ </option>
+                                        <option value="42">Meherpur   মেহেরপুর </option>
+                                        <option value="62">Moulvibazar   মৌলভীবাজার </option>
+                                        <option value="26">Munshiganj    মুন্সীগঞ্জ </option>
+                                        <option value="27">Mymensingh   ময়মনসিংহ </option>
+                                        <option value="47">Naogaon   নওগাঁ </option>
+                                        <option value="43">Narail   নড়াইল </option>
+                                        <option value="28">Narayanganj   নারায়ণগঞ্জ </option>
+                                        <option value="29">Narsingdi   নরসিংদী </option>
+                                        <option value="48">Natore   নাটোর </option>
+                                        <option value="30">Netrakona   নেত্রকোণা </option>
+                                        <option value="57">Nilphamari   নীলফামারী </option>
+                                        <option value="16">Noakhali   নোয়াখালী </option>
+                                        <option value="50">Pabna   পাবনা </option>
+                                        <option value="58">Panchagarh   পঞ্চগড় </option>
+                                        <option value="5">Patuakhali   পটুয়াখালী </option>
+                                        <option value="6">Pirojpur   পিরোজপুর </option>
+                                        <option value="31">Rajbari   রাজবাড়ী </option>
+                                        <option value="51">Rajshahi   রাজশাহী </option>
+                                        <option value="17">Rangamati   রাঙ্গামাটি </option>
+                                        <option value="59">Rangpur   রংপুর </option>
+                                        <option value="44">Satkhira   সাতক্ষীরা </option>
+                                        <option value="32">Shariatpur    শরীয়তপুর </option>
+                                        <option value="33">Sherpur   শেরপুর </option>
+                                        <option value="52">Sirajganj   সিরাজগঞ্জ </option>
+                                        <option value="63">Sunamganj   সুনামগন্ঞ্জ </option>
+                                        <option value="64">Sylhet   সিলেট </option>
+                                        <option value="34">Tangail   টাঙ্গাইল </option>
+                                        <option value="60">Thakurgaon   ঠাকুরগাওঁ </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    <div id="MainContent_UpdatePanel2">
+
+                        <div class="section-title text-small same-as-checkbox-container">
+                            স্থায়ী ঠিকানা
+                            <p>
+                                <label class="checkbox-inline">
+                                    <input id="" type="checkbox" name="ctl00$$">
+                                    <span>বর্তমান ঠিকানার অনুরূপ</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>গ্রাম/ বাড়ী</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>ডাকঘর/ রোড</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>থানা/ উপজেলা	</label>
+                                    <input name="ctl00$$" type="text" id="" class="form-control"><br>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>জেলা</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="0">  </option>
+                                        <option value="35">Bagerhat   বাগেরহাট </option>
+                                        <option value="7">Bandarban   বান্দরবন </option>
+                                        <option value="1">Barguna  বরগুনা </option>
+                                        <option value="2">Barisal  বরিশাল </option>
+                                        <option value="3">Bhola   ভোলা </option>
+                                        <option value="45">Bogra   বগুড়া </option>
+                                        <option value="8">Brahmanbaria   ব্রাহ্মণবাড়িয়া </option>
+                                        <option value="9">Chandpur   চাঁদপুর </option>
+                                        <option value="49">Chapainawabganj   চাঁপাইনবাবগঞ্জ </option>
+                                        <option value="10">Chittagong   চট্টগ্রাম </option>
+                                        <option value="36">Chuadanga   চুয়াডাঙ্গা </option>
+                                        <option value="11">Comilla   কুমিল্লা </option>
+                                        <option value="12">Cox's Bazar   কক্সবাজার </option>
+                                        <option value="18">Dhaka   ঢাকা </option>
+                                        <option value="53">Dinajpur   দিনাজপুর </option>
+                                        <option value="19">Faridpur   ফরিদপুর </option>
+                                        <option value="13">Feni   ফেনী </option>
+                                        <option value="54">Gaibandha   গাইবান্ধা </option>
+                                        <option value="20">Gazipur   গাজীপুর </option>
+                                        <option value="21">Gopalganj   গোপালগঞ্জ </option>
+                                        <option value="61">Habiganj   হবিগন্ঞ্জ </option>
+                                        <option value="22">Jamalpur   জামালপুর </option>
+                                        <option value="37">Jessore   যশোর </option>
+                                        <option value="4">Jhalokati   ঝালকাঠি </option>
+                                        <option value="38">Jhenaidah   ঝিনাইদহ </option>
+                                        <option value="46">Joypurhat   জয়পুরহাট </option>
+                                        <option value="14">Khagrachhari   খাগড়াছড়ি </option>
+                                        <option value="39">Khulna   খুলনা </option>
+                                        <option value="23">Kishoreganj   কিশোরগঞ্জ </option>
+                                        <option value="55">Kurigram   কুড়িগ্রাম </option>
+                                        <option value="40">Kushtia   কুষ্টিয়া </option>
+                                        <option value="15">Lakshmipur   লক্ষীপুর </option>
+                                        <option value="56">Lalmonirhat   লালমনিরহাট </option>
+                                        <option value="24">Madaripur   মাদারীপুর </option>
+                                        <option value="41">Magura   মাগুরা </option>
+                                        <option value="25">Manikganj   মানিকগঞ্জ </option>
+                                        <option value="42">Meherpur   মেহেরপুর </option>
+                                        <option value="62">Moulvibazar   মৌলভীবাজার </option>
+                                        <option value="26">Munshiganj    মুন্সীগঞ্জ </option>
+                                        <option value="27">Mymensingh   ময়মনসিংহ </option>
+                                        <option value="47">Naogaon   নওগাঁ </option>
+                                        <option value="43">Narail   নড়াইল </option>
+                                        <option value="28">Narayanganj   নারায়ণগঞ্জ </option>
+                                        <option value="29">Narsingdi   নরসিংদী </option>
+                                        <option value="48">Natore   নাটোর </option>
+                                        <option value="30">Netrakona   নেত্রকোণা </option>
+                                        <option value="57">Nilphamari   নীলফামারী </option>
+                                        <option value="16">Noakhali   নোয়াখালী </option>
+                                        <option value="50">Pabna   পাবনা </option>
+                                        <option value="58">Panchagarh   পঞ্চগড় </option>
+                                        <option value="5">Patuakhali   পটুয়াখালী </option>
+                                        <option value="6">Pirojpur   পিরোজপুর </option>
+                                        <option value="31">Rajbari   রাজবাড়ী </option>
+                                        <option value="51">Rajshahi   রাজশাহী </option>
+                                        <option value="17">Rangamati   রাঙ্গামাটি </option>
+                                        <option value="59">Rangpur   রংপুর </option>
+                                        <option value="44">Satkhira   সাতক্ষীরা </option>
+                                        <option value="32">Shariatpur    শরীয়তপুর </option>
+                                        <option value="33">Sherpur   শেরপুর </option>
+                                        <option value="52">Sirajganj   সিরাজগঞ্জ </option>
+                                        <option value="63">Sunamganj   সুনামগন্ঞ্জ </option>
+                                        <option value="64">Sylhet   সিলেট </option>
+                                        <option value="34">Tangail   টাঙ্গাইল </option>
+                                        <option value="60">Thakurgaon   ঠাকুরগাওঁ </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+                    <div class="section-title text-small">
+                        অন্যান্য অপর পক্ষ
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>নাম এবং ঠিকানা</label>
+                                <textarea name="ctl00$$" rows="3" cols="20" id="" class="form-control" autocomplete="off"></textarea><br>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>মোবাইল নং</label>
+                                <textarea name="ctl00$$" rows="3" cols="20" id="" title="মোবাইল নং ইংলিশ এ লিখুন। মোবাইল নং যোগ করার জন্য কমা(,) ব্যবহার করুন" class="form-control" autocomplete="off"></textarea><br>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="section-title text-small">
+                            অন্যান্য তথ্য
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>ধর্ম</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="1">  </option>
+                                        <option value="3">Buddhists বুদ্ধ </option>
+                                        <option value="4">Christian ক্রিস্টিয়ান </option>
+                                        <option value="5">Hindus হিন্দু </option>
+                                        <option value="2">Islam ইসলাম </option>
+                                        <option value="6">Other অন্যান্য </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>জাতিসত্তা</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="1">  </option>
+                                        <option value="2">Bangali বাঙ্গালী </option>
+                                        <option value="3">Bawm বম </option>
+                                        <option value="4">Chak চক </option>
+                                        <option value="5">Chakma চাকমা </option>
+                                        <option value="6">Hajong হাজং </option>
+                                        <option value="7">Khasia খাসিয়া </option>
+                                        <option value="8">Khumi খোমি </option>
+                                        <option value="9">Khyang খায়াং </option>
+                                        <option value="10">Lushai লোসাই </option>
+                                        <option value="11">Magh মগ </option>
+                                        <option value="12">Manipuri মনিপুরী </option>
+                                        <option value="13">Marma মার্মা </option>
+                                        <option value="14">Mru মরু </option>
+                                        <option value="15">Murong মোরং </option>
+                                        <option value="16">Oraon ওরায়ং </option>
+                                        <option value="17">Other অন্যান্য </option>
+                                        <option value="18">Paharia পাহাড়িয়া </option>
+                                        <option value="19">Pankho পাংখো </option>
+                                        <option value="20">Rajbangshi রাজবংশী </option>
+                                        <option value="21">Rakhain রাখাইং </option>
+                                        <option value="22">Santal সান্তাল </option>
+                                        <option value="23">Tanchangya তঞ্চঙ্গা </option>
+                                        <option value="24">Tripura ত্রিপুরা </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>জাতীয়তা</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="2">Bangladeshi  বাংলাদেশী </option>
+                                        <option value="9">Foreigner বিদেশী </option>
+                                        <option value="10">Nationality Retest-1 Nationality Retest-1 </option>
+                                        <option value="11">Nationality Retest-1 Nationality Retest-1 </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>পেশা</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value="1">  </option>
+                                        <option value="2">Agriculture কৃষি </option>
+                                        <option value="3">Business ব্যবসা </option>
+                                        <option value="4">Day Labour দিনমজুরী </option>
+                                        <option value="5">Govt Service সরকারী চাকুরি </option>
+                                        <option value="6">Housewife গৃহিনী </option>
+                                        <option value="7">NGO এনজিও </option>
+                                        <option value="8">Other অন্যান্য </option>
+                                        <option value="9">Private Service ব্যাক্তিগত সেবা </option>
+                                        <option value="10">Professional পেশাগত </option>
+                                        <option value="11">Self-employed নিজ কর্মসংস্থান </option>
+                                        <option value="12">Student  </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>প্রতিবন্ধী</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine">
+                                        <option value=""></option>
+                                        <option value="0"> Yes (হ্যা) </option>
+                                        <option value="1"> No (না) </option>
+
+                                        </select>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group ng-hide">
+                                    <label>প্রতিবন্ধীর ধরন</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine" >
+                                        <option value="1">  </option>
+                                        <option value="2">Autism  </option>
+                                        <option value="3">Hearing impairment শ্রবণ প্রতিবন্ধী </option>
+                                        <option value="4">Intellectual disability বুদ্ধি প্রতিবন্ধী </option>
+                                        <option value="5">Physical disability শারীরিক প্রতিবন্ধী </option>
+                                        <option value="6">Speech impairment বাক প্রতিবন্ধী </option>
+                                        <option value="7">Visual impairment দৃষ্টি প্রতিবন্ধী </option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label>মাসিক আয়</label>
+                                    <select name="ctl00$$" id="" class="form-control input-sm ng-pristine" >
+                                            <option value="1">0-0</option>
+                                            <option value="2">0-5000</option>
+                                            <option value="3">6000-10000</option>
+                                            <option value="4">11000-15000</option>
+                                            <option value="5">16000-20000</option>
+                                            <option value="6">21000-25000</option>
+                                            <option value="7">26000-30000</option>
+                                            <option value="8">31000-35000</option>
+                                            <option value="9">36000-40000</option>
+                                            <option value="10">41000-45000</option>
+                                            <option value="11">46000-50000</option>
+                                            <option value="12">51000-55000</option>
+                                            <option value="13">56000-60000</option>
+                                            <option value="14">61000-65000</option>
+                                            <option value="15">66000-70000</option>
+                                            <option value="16">71000-75000</option>
+                                            <option value="17">76000-80000</option>
+                                            <option value="18">81000-85000</option>
+                                            <option value="19">86000-60000</option>
+                                            <option value="20">61000-95000</option>
+                                            <option value="21">96000-100000</option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="row">
+                    <div class="section-title">
+                        আবেদনকারীর স্বাক্ষর
+                    </div>
+                    
+                    <div class="col-sm-5">
+                        <label for="exampleInputFile">File input</label><br>
+                        <input class="form-control" type="file" id="exampleInputFile">
+                    </div>
+        
+                    <div class="col-sm-4 float-end">
+                        <br>
+                        <button class="btn btn-primary" data-dismiss="modal">বাতিল</button>
+                        <button class="btn btn-primary" onclick="previousStep('step3', 'step2')">পূর্বের ধাপ</button>
+                        <button class="btn btn-primary"type="submit"> সংরক্ষন করুন</button>
+    
+                    </div>
+                </div>
+    </div>
+            </div>
+        <!-- section 3 close -->
+        </form>
+    </div>
+</div>
+            
+</div>
+</div>
+       
+  </div>
+        <!-- *** Footer *** -->
+        <br> <br> <br> 
+        <footer>
+            &copy; 2023 - National Legal Aid Services Organization <br>
+            Law & Justice Division <br>
+            Ministry of Law, Justice & Parliamentary Affairs, All Rights Reserved. 
+        </footer>
+    </div>
+
+
+</body>
+</html>
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        
+
+        <script>
+            let currentStep = 1;
+            const formSteps = document.querySelectorAll('.step-form');
+            
+            function hideAllSteps() {
+                formSteps.forEach(step => {
+                    step.style.display = 'none';
+                });
+            }
+            
+            function showStep(stepNumber) {
+                hideAllSteps();
+                document.getElementById(stepNumber).style.display = 'block';
+            }
+            
+            function nextStep(current, next) {
+                // Perform validation if needed
+                currentStep++;
+                showStep(next);
+            }
+            
+            function previousStep(current, previous) {
+                currentStep--;
+                showStep(previous);
+            }
+            
+            function submitForm() {
+                // Perform form submission logic here
+                alert('Form submitted!');
+            }
+            
+            // Initially, hide all steps except the first step
+            hideAllSteps();
+            showStep('step1');
+        </script>
+        
+
+
+</body>
+</html>
