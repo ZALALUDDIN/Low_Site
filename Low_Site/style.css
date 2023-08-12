@@ -84,6 +84,7 @@ button{
   }
 
   .navbar-nav .nav-item.selected {
-    background-color: white;
+    background-color: rgb(212, 204, 246);
     color: blue; 
+    
 }

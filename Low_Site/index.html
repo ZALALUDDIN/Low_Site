@@ -84,14 +84,14 @@
                             <div class="row">
                                 <div class="col-sm-2">
                                     <div class="form-group">
-                                        <label for="date"><span style="color: red;">*</span>তারিখ</label><br>
-                                        <input class="form-control" type="date" id="date" name="date">
+                                        <label for="date"><span style="color: red; font-size: large;">*</span>তারিখ</label><br>
+                                        <input class="form-control" type="date" id="date" name="date" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label for="selector1" class="control-label"><span style="color: red;">*</span>কার্যালয়ের নাম</label>
-                                        <select name="selector1" id="selector1" class="form-control">
+                                        <label for="selector1" class="control-label"><span style="color: red; font-size: large;">*</span>কার্যালয়ের নাম</label>
+                                        <select name="selector1" id="selector1" class="form-control" required>
                                             <option>Legal Aid Office,Dhaka</option>
                                             <option>Legal Aid Office,Gazipur</option>
                                             <option>Legal Aid Office,Faridpur</option>
@@ -101,8 +101,8 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label for="selector" class="control-label"><span style="color: red;">*</span>আবেদনের ধরন</label>
-                                        <select name="selector" id="selector" class="form-control">
+                                        <label for="selector" class="control-label"><span style="color: red; font-size: large;">*</span>আবেদনের ধরন</label>
+                                        <select name="selector" id="selector" class="form-control" required>
                                             <option>Post-Case</option>
                                             <option>Pre-case</option>
                                         </select>
@@ -119,8 +119,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-sm-4">
-                                        <label><span style="color: red;">*</span>আবেদন এর মাধ্যম</label>
-                                        <select name="selector" id="selector" class="form-control">
+                                        <label><span style="color: red; font-size: large;">*</span>আবেদন এর মাধ্যম</label>
+                                        <select name="selector" id="selector" class="form-control" required>
                                             <option>আপোষ মিমাংসা সমাধানের উদ্দেশ্যে</option>
                                             <option>নতুন মামলা দায়ের এর উদ্দেশ্যে</option>
                                             <option>বিদ্যমান মামলা আর্থিক সহায়তা প্রাপ্তির উদ্দেশ্যে</option>
@@ -142,8 +142,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-sm-4">
-                                        <label for="selector"><span style="color: red;">*</span>ধরন</label>
-                                            <select name="selector" id="selector" class="form-control">
+                                        <label for="selector"><span style="color: red; font-size: large;">*</span>ধরন</label>
+                                            <select name="selector" id="selector2" class="form-control" required>
                                                 <option>Civil</option>
                                                 <option>Civil Appeal </option>
                                                 <option>Civil Rivision </option>
@@ -182,8 +182,8 @@
                         <div class="row">
                             <div class="col-sm-8">
                                 <div class="form-group">
-                                    <label for="txtarea"><span style="color: red;">*</span>সাধারন বর্ণনা</label>
-                                        <textarea name="txtarea"  id="txtarea" cols="50" rows="4" class="form-control"></textarea>
+                                    <label for="txtarea"><span style="color: red; font-size: large;">*</span>সাধারন বর্ণনা</label>
+                                        <textarea name="txtarea"  id="txtarea" cols="50" rows="4" class="form-control" required></textarea>
                                         
                                         
                                 </div>
@@ -194,8 +194,8 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="selector"><span style="color: red;">*</span>আইনগত সহায়তা প্রত্যাশা করা হয়েছে</label>
-                                        <select name="selector" id="selector" class="form-control">
+                                    <label for="selector"><span style="color: red; font-size: large;">*</span>আইনগত সহায়তা প্রত্যাশা করা হয়েছে</label>
+                                        <select name="selector" id="selector3" class="form-control" required>
                                         <option>আপোষ মিমাংসা সমাধানের উদ্দেশ্যে</option>
                                         <option>নতুন মামলা দায়ের এর উদ্দেশ্যে</option>
                                         <option>বিদ্যমান মামলা আর্থিক সহায়তা প্রাপ্তির উদ্দেশ্যে</option>
@@ -228,7 +228,7 @@
                         <div class="col-sm-4 float-right">
                             <br>
                             <button class="btn btn-primary" data-dismiss="modal">বাতিল</button>
-                            <button class="btn btn-primary" onclick="nextStep('step1', 'step2')">পরের ধাপ</button>
+                            <button class="btn btn-primary" onclick="validateAndMove('step1', 'step2')">পরের ধাপ</button>
                         </div>
                     </div>
                 </div>
@@ -262,8 +262,8 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-sm-4">
-                                    <label for="name"><span style="color: red;">*</span>নাম</label>
-                                    <input class="form-control" type="text" id="name" name="name">
+                                    <label for="name"><span style="color: red; font-size: large;">*</span>নাম</label>
+                                    <input class="form-control" type="text" id="name" name="name" required>
                                 </div>
                                 <div class="col-sm-4">
                                     <label for="lname">জাতীয় পরিচয়পত্র নম্বর</label>
@@ -279,14 +279,14 @@
                                     <label for="yes">Father</label>
                                     <input type="radio" id="na" name="na" value="na">
                                     <label for="na">পিতা / স্বামীর নাম</label>
-                                    <input class="form-control" type="text" id="name" name="name">
+                                    <input class="form-control" type="text" id="naame" name="name">
                                 </div>
                                 <div class="col-sm-4">
                                     <input type="radio" id="yes" name="yes" value="yes">
                                     <label for="yes">মাতা</label>
                                     <input type="radio" id="na" name="na" value="na">
                                     <label for="na">মাতা / স্ত্রীর নাম</label>
-                                    <input class="form-control" type="text" id="name" name="name">
+                                    <input class="form-control" type="text" id="nadme" name="name">
                                 </div>
 
                             </div>
@@ -294,8 +294,8 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-sm-4">
-                                    <label for="selector" class="col-sm-4 control-label"><span style="color: red;">*</span> লিঙ্গ </label>
-                                    <select name="selector1" id="selector1" class="form-control">
+                                    <label for="selector" class="col-sm-4 control-label"><span style="color: red; font-size: large;">*</span> লিঙ্গ </label>
+                                    <select name="selector1" id="selector4" class="form-control" required>
                                         <option>Male পুরুষ </option>
                                         <option>Female মহিলা</option>
                                         <option>Child শিশু</option>
@@ -346,8 +346,8 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-sm-4">
-                                    <label for="name"><span style="color: red;">*</span>যোগাযোগের নাম্বার</label>
-                                    <input class="form-control" type="number" id="name" name="name">
+                                    <label for="name"><span style="color: red; font-size: large;">*</span>যোগাযোগের নাম্বার</label>
+                                    <input class="form-control" type="number" id="selector5" name="name" required>
                                 </div>
                                 <div class="col-sm-4">
                                     <label for="lname">যোগাযোগের বিকল্প নাম্বার</label>
@@ -782,7 +782,7 @@
                                         <br>
                                         <button class="btn btn-primary" data-dismiss="modal">বাতিল</button>
                                         <button class="btn btn-primary" onclick="previousStep('step2', 'step1')">পূর্বের ধাপ</button>
-                                        <button class="btn btn-primary" onclick="nextStep('step2', 'step3')">পরের ধাপ</button>
+                                        <button class="btn btn-primary" onclick="validateAndMove2('step2', 'step3')">পরের ধাপ</button>
 
                                     </div>
                                 </div>
@@ -1346,7 +1346,7 @@
                         <br>
                         <button class="btn btn-primary" data-dismiss="modal">বাতিল</button>
                         <button class="btn btn-primary" onclick="previousStep('step3', 'step2')">পূর্বের ধাপ</button>
-                        <button class="btn btn-primary"type="submit"> সংরক্ষন করুন</button>
+                        <button class="btn btn-primary"type="submit" onclick="submitForm()"> সংরক্ষন করুন</button>
     
                     </div>
                 </div>
@@ -1423,7 +1423,57 @@
             
             hideAllSteps();
             showStep('step1');
+
+
+
+
+            function validateStep1() {
+                const dateInput = document.getElementById('date');
+                const selector1Input = document.getElementById('selector1');
+                const selectorInput = document.getElementById('selector');
+                const selector2Input = document.getElementById('selector2');
+                const txtareaInput = document.getElementById('txtarea');
+                const selector3Input = document.getElementById('selector3');
+                
+                if (dateInput.value === '' || selector1Input.value === '' || selectorInput.value === '' || selector2Input.value === '' || txtareaInput.value === '' || txtareaInput.value === ''  ) {
+                    alert('Please fill out all required fields in First Form.');
+                    return false;
+                }
+                
+                return true;
+            }
+
+            function validateAndMove(step1, step2) {
+                if (validateStep1()) {
+                    nextStep(step1, step2);
+                }
+            }
+
+
+
+
+            function validateStep2() {
+                const nameInput = document.getElementById('name');
+                const selector4Input = document.getElementById('selector4');
+                const selector5nput = document.getElementById('selector5');
+                
+                if (nameInput.value === '' || selector4Input.value === '' || selector5nput.value === '' ) {
+                    alert('Please fill out all required fields in Second Form.');
+                    return false;
+                }
+                
+                return true;
+            }
+
+            function validateAndMove2(step2, step3) {
+                if (validateStep2()) {
+                    nextStep(step2, step3);
+                }
+            }
+
+
         </script>
+
 
 </body>
 </html>
