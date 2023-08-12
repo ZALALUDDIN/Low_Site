@@ -82,3 +82,8 @@ button{
   .step-form {
     display: none;
   }
+
+  .navbar-nav .nav-item.selected {
+    background-color: white;
+    color: blue; 
+}
