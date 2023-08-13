@@ -1,0 +1,91 @@
+#pageHeaderContainer {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  .pagebanner {
+    background: #003059;
+    color: #fff;
+    font-family: Arial;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .navbar-default {
+    background-color: #fcefe3;
+    border-bottom: double 1px #ccc;
+  }
+  .navbar {
+    min-height: inherit;
+    border-radius: 0;
+    border-top: none;
+  }
+  .navbar {
+    margin-bottom: 0;
+  }
+  .banner-container {
+    background: #FFFFFF url('./images/bg_page.jpg') top repeat-x;
+    display: none;
+  }
+  .banner {
+    background: url('./images/login_banner.jpg') no-repeat center;
+    height: 190px !important;
+  }
+  
+  .login-header {
+    font-size: 25px;
+    font-weight: bold;
+    color: #164674;
+  }
+  .login-page-panel {
+    background: #f9f1ea;
+    padding: 8px 25px 15px 25px;
+    border-color: #164674;
+    border-style: solid;
+    border-width: 0.10em;
+    border-radius: 6px;
+  }
+  .form-group {
+    margin-bottom: 10px !important;
+  }
+  .login-page-panel .form-control {
+    padding: 12px;
+    height: auto;
+    color: black !important;
+  }
+  .form-control {
+    border-color: #e6e7e7;
+  }
+
+  .login-page-panel .forgot-password {
+    color: #164674;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+  }
+  .login-page-panel .rememberMeLabel {
+    color: #929497;
+    font-weight: normal;
+    font-size: 16px;
+    display: block;
+    float: left;
+    margin-left: 5px;
+  }
+  .login-page-panel .rememberMeCheck {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 4px;
+  }
+  .login-button {
+    background-color: #003059 !important;
+    color: #fff !important;
+  }
+
+
+    

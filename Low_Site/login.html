@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to NLASO</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="dvloginbanner" class="banner-container" style="display: block;">
+        <div class="container banner">
+        </div>
+        <div class="topbannerfooter">
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" id="template-container" style="margin: 30px 0px 0px;">
+                <form method="post" action="#">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">&nbsp;</div>
+                                    <div class="col-md-4">
+                                        <div class="login-page-panel form-horizontal">
+                                            <div class="row">
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12 login-header">
+                                                    Login
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <input name="txtUserId" type="text" id="txtUserId" class="form-control ng-pristine ng-valid" placeholder="User" required>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <input name="txtPassword" id="txtPassword" type="password" class="form-control ng-pristine ng-valid" placeholder="Password" required>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-6 col-sm-12">
+                                                    <input type="checkbox" id="remember" class="rememberMeCheck">
+                                                    <label for="remember" class="rememberMeLabel">Remember me</label>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 text-right">
+                                                    <a href="#" class="forgot-password">Forgot your password?</a>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <button type="submit" name="btnLogin" id="btnLogin" class="login-button form-control"><span style="color: #fff;">Login</span></button>
+                                                </div>
+                                            </div><br><br>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <span id="lblMessage" style="color:Red;">User name or passward is missing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+       
+    </div>
+
+    
+</body>
+</html>
